@@ -87,14 +87,14 @@ void write_courses_offered(std::vector<Course>& all_courses) {
   std::ofstream outFile(COURSES_OFFERED_PATH);
   outFile << "Title,Number of Units,Quarter" << std::endl;
   std::vector<Course> offeredCourses;
-  for (const Course &course : all_courses) {
-    if (course.quarter == "null")
+  for (const auto [title, number_of_units, quarter] : all_courses) {
+    if (quarter == "null")
         continue;
     else {
-      outFile << course.title << "," 
-              << course.number_of_units << "," 
-              << course.quarter << std::endl;
-      offeredCourses.push_back(course);
+      outFile << title << "," 
+              << number_of_units << "," 
+              << quarter << std::endl;
+      offeredCourses.push_back(Course{title, number_of_units, quarter});
     }
   }
 
