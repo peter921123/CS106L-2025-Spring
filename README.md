@@ -1,5 +1,3 @@
-# CS106L Assignments 
+# CS106L 2025 Spring Assignments 
 
-This repository contains starter code for Stanford CS106L, a course on Standard C++ programming.
-
-To get started, [follow the setup instructions in A0](/assignment0/README.md)!
+This repository contains my CS106L assignment solutions as C++ practice.
